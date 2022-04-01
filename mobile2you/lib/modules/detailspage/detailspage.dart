@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mobile2you/modules/detailspage/titleimagebox.dart';
 import 'package:mobile2you/shared/getdata.dart';
 import 'package:mobile2you/modules/detailspage/similarlist.dart';
 import 'package:mobile2you/shared/elements/errorpage.dart';
-import 'package:mobile2you/shared/elements/titleimagebox.dart';
 
 class DetailsPage extends StatefulWidget {
   const DetailsPage({Key? key, required this.id}) : super(key: key);
@@ -52,7 +52,7 @@ Widget moviesLoadData(context, {required id}) {
                           'https://image.tmdb.org/t/p/w500${_movieData['poster_path']}',
                       likes: _movieData['vote_count'],
                       popularity: _movieData['popularity']),
-                  body: bodyContent(providerID: id));
+                  body: similarContent(providerID: id));
             }
         }
       });

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mobile2you/provider/movieprovider.dart';
 import 'package:mobile2you/shared/elements/homethumbnails.dart';
 import 'package:mobile2you/shared/elements/textfield.dart';
+import 'package:mobile2you/shared/themes/appcolors.dart';
+import 'package:mobile2you/shared/themes/textstyles.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,10 +23,10 @@ class _HomePageState extends State<HomePage> {
         builder: (BuildContext context, MoviesProvider value, Widget? child) {
       var moviesProvider = Provider.of<MoviesProvider>(context, listen: false);
       return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: AppColors.background,
         appBar: AppBar(
           toolbarHeight: 80,
-          backgroundColor: Colors.red.shade900.withOpacity(0.8),
+          backgroundColor: AppColors.primary.withOpacity(0.8),
           centerTitle: true,
           actions: [
             TextButton(
@@ -35,10 +37,7 @@ class _HomePageState extends State<HomePage> {
                 },
                 child: const Text(
                   "OK",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 19,
-                      fontWeight: FontWeight.bold),
+                  style: Styles.buttons,
                 ))
           ],
           title: buildTextField(
@@ -58,7 +57,7 @@ class _HomePageState extends State<HomePage> {
                 const Text(
                   "FIXADOS PELO DESENVOLVEDOR",
                   style: TextStyle(
-                      color: Colors.white,
+                      color: AppColors.text,
                       fontWeight: FontWeight.bold,
                       fontSize: 17),
                 ),

@@ -7,10 +7,12 @@ class MoviesProvider extends ChangeNotifier {
   List _favorites = [];
   List _watched = [];
   String? _movieID;
+  String? _similarID;
 
   get favorites => _favorites;
   get watched => _watched;
   get movieID => _movieID;
+  get similarID => _similarID;
 
   set favorites(var value) {
     _favorites.contains(value)
@@ -20,7 +22,7 @@ class MoviesProvider extends ChangeNotifier {
   }
 
   set watched(var value) {
-    _watched.add(value);
+    _watched.contains(value) ? _watched.remove(value) : _watched.add(value);
     notifyListeners();
   }
 
@@ -29,8 +31,17 @@ class MoviesProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  set similarID(var value) {
+    _similarID = value;
+    notifyListeners();
+  }
+
   favoriteControl() {
     favorites = movieID;
+  }
+
+  watchedControl() {
+    watched = similarID;
     notifyListeners();
   }
 }

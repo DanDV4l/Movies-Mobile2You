@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 
 void main() => runApp(ChangeNotifierProvider(
       create: (_) => MoviesProvider(),
+      lazy: false,
       child: MaterialApp(
         routes: {
           "/": (context) => const HomePage(),
