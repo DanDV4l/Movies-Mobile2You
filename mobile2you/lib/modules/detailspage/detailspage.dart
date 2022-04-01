@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mobile2you/modules/detailspage/getdata.dart';
+import 'package:mobile2you/shared/getdata.dart';
 import 'package:mobile2you/modules/detailspage/similarlist.dart';
+import 'package:mobile2you/shared/elements/errorpage.dart';
 import 'package:mobile2you/shared/elements/titleimagebox.dart';
 
 class DetailsPage extends StatefulWidget {
@@ -40,15 +41,19 @@ Widget moviesLoadData(context, {required id}) {
             return Container();
           case ConnectionState.done:
             var _movieData = snapshot.data!;
-            return Scaffold(
-                backgroundColor: Colors.black,
-                appBar: buildTitleImageBox(context,
-                    title: _movieData['title'],
-                    posterURL:
-                        'https://image.tmdb.org/t/p/w500${_movieData['poster_path']}',
-                    likes: _movieData['vote_count'],
-                    popularity: _movieData['popularity']),
-                body: bodyContent());
+            if (_movieData['title'] == null) {
+              return const ErrorPage();
+            } else {
+              return Scaffold(
+                  backgroundColor: Colors.black,
+                  appBar: buildTitleImageBox(context,
+                      title: _movieData['title'],
+                      posterURL:
+                          'https://image.tmdb.org/t/p/w500${_movieData['poster_path']}',
+                      likes: _movieData['vote_count'],
+                      popularity: _movieData['popularity']),
+                  body: bodyContent(providerID: id));
+            }
         }
       });
 }

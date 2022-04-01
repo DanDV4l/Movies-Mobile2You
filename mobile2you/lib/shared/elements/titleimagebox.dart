@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile2you/provider/movieprovider.dart';
+import 'package:provider/provider.dart';
 
 bool favorite = false;
 
@@ -14,8 +16,8 @@ PreferredSize buildTitleImageBox(context,
         padding: const EdgeInsets.only(top: 40),
         height: _boxHeight,
         decoration: BoxDecoration(
-          image:
-              DecorationImage(image: NetworkImage(posterURL), fit: BoxFit.fill),
+          image: DecorationImage(
+              image: NetworkImage(posterURL), fit: BoxFit.cover),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -102,16 +104,7 @@ Widget buildTitleBar(
                     fontWeight: FontWeight.bold),
               ),
             ),
-            IconButton(
-              icon: Icon(
-                favorite ? Icons.favorite : Icons.favorite_outline_sharp,
-                color: Colors.white,
-                size: 30,
-              ),
-              onPressed: () {
-                // favorite = true;
-              },
-            )
+            favoriteButton()
           ],
         ),
         //title - end
@@ -159,4 +152,24 @@ Widget buildTitleBar(
       ],
     ),
   );
+}
+
+Widget favoriteButton() {
+  return Consumer<MoviesProvider>(
+      builder: (BuildContext context, MoviesProvider value, Widget? child) {
+    var _moviesProvider = Provider.of<MoviesProvider>(context, listen: false);
+
+    return IconButton(
+      icon: Icon(
+        _moviesProvider.favorites!.contains(_moviesProvider.movieID)
+            ? Icons.favorite
+            : Icons.favorite_outline_sharp,
+        color: Colors.white,
+        size: 30,
+      ),
+      onPressed: () {
+        _moviesProvider.favoriteControl();
+      },
+    );
+  });
 }
