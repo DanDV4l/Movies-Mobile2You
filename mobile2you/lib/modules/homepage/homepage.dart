@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile2you/modules/homepage/buildfavorite.dart';
 import 'package:mobile2you/provider/movieprovider.dart';
 import 'package:mobile2you/shared/elements/homethumbnails.dart';
 import 'package:mobile2you/shared/elements/textfield.dart';
@@ -54,41 +55,61 @@ class _HomePageState extends State<HomePage> {
             width: _getScreenSize.width,
             child: Column(
               children: [
-                const Text(
+                moviesProvider.favorites!.isNotEmpty
+                    ? Container(
+                        margin: const EdgeInsets.only(bottom: 20),
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade900,
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(8)),
+                            border: Border.all(color: Colors.black, width: 1)),
+                        child: Column(children: [
+                          Text(
+                            "FAVORITOS",
+                            style: Styles.title,
+                          ),
+                          buildFavorite(context,
+                              getScreenSize: _getScreenSize,
+                              itemProvider: moviesProvider.favorites)
+                        ]),
+                      )
+                    : const SizedBox(),
+                Text(
                   "FIXADOS PELO DESENVOLVEDOR",
-                  style: TextStyle(
-                      color: AppColors.text,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 17),
+                  style: Styles.title,
                 ),
-                Wrap(
-                  children: [
-                    homeThumbnailMovie(context, id: '2911', setID: () {
-                      moviesProvider.movieID = '2911';
-                      Navigator.pushNamed(context, '/details');
-                    }),
-                    homeThumbnailMovie(context, id: '888', setID: () {
-                      moviesProvider.movieID = '888';
-                      Navigator.pushNamed(context, '/details');
-                    }),
-                    homeThumbnailMovie(context, id: '440', setID: () {
-                      moviesProvider.movieID = '440';
-                      Navigator.pushNamed(context, '/details');
-                    }),
-                    homeThumbnailMovie(context, id: '2675', setID: () {
-                      moviesProvider.movieID = '2675';
-                      Navigator.pushNamed(context, '/details');
-                    }),
-                    homeThumbnailMovie(context, id: '4547', setID: () {
-                      moviesProvider.movieID = '4547';
-                      Navigator.pushNamed(context, '/details');
-                    }),
-                    homeThumbnailMovie(context, id: '772', setID: () {
-                      moviesProvider.movieID = '772';
-                      Navigator.pushNamed(context, '/details');
-                    })
-                  ],
-                )
+                Padding(
+                  padding: const EdgeInsets.only(top: 20, bottom: 20),
+                  child: Wrap(
+                    children: [
+                      homeThumbnailMovie(context, id: '2911', setID: () {
+                        moviesProvider.movieID = '2911';
+                        Navigator.pushNamed(context, '/details');
+                      }),
+                      homeThumbnailMovie(context, id: '888', setID: () {
+                        moviesProvider.movieID = '888';
+                        Navigator.pushNamed(context, '/details');
+                      }),
+                      homeThumbnailMovie(context, id: '440', setID: () {
+                        moviesProvider.movieID = '440';
+                        Navigator.pushNamed(context, '/details');
+                      }),
+                      homeThumbnailMovie(context, id: '2675', setID: () {
+                        moviesProvider.movieID = '2675';
+                        Navigator.pushNamed(context, '/details');
+                      }),
+                      homeThumbnailMovie(context, id: '4547', setID: () {
+                        moviesProvider.movieID = '4547';
+                        Navigator.pushNamed(context, '/details');
+                      }),
+                      homeThumbnailMovie(context, id: '772', setID: () {
+                        moviesProvider.movieID = '772';
+                        Navigator.pushNamed(context, '/details');
+                      })
+                    ],
+                  ),
+                ),
               ],
             ),
           )),

@@ -3,8 +3,6 @@ import 'dart:convert';
 
 import 'package:mobile2you/models/genres.dart';
 import 'package:mobile2you/models/similarmovies.dart';
-import 'package:mobile2you/provider/movieprovider.dart';
-import 'package:provider/provider.dart';
 
 Future<Map<String, dynamic>> getMovieData({required id}) async {
   var _url = Uri.parse(
@@ -56,7 +54,7 @@ Future<List<SimilarMovie>> getSimilarMovie({required id}) async {
         listItem['title'],
         "https://image.tmdb.org/t/p/w500${listItem['poster_path']}",
         listItem['release_date'],
-        listItem['genre_ids']);
+        await findGenre(listItem['genre_ids']));
     similarList.add(similar);
   }
 

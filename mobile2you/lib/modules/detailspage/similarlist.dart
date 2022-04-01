@@ -38,8 +38,8 @@ Widget similarContent({providerID}) {
                     ),
                     trailing: IconButton(
                       icon: Icon(
-                          Provider.of<MoviesProvider>(context, listen: true)
-                                  .watched
+                          Provider.of<MoviesProvider>(context, listen: false)
+                                  .favorites
                                   .contains(_similarData[index].id.toString())
                               ? CupertinoIcons.checkmark_alt_circle_fill
                               : CupertinoIcons.checkmark_alt_circle,
@@ -48,9 +48,8 @@ Widget similarContent({providerID}) {
                       onPressed: () {
                         Provider.of<MoviesProvider>(context, listen: false)
                             .similarID = _similarData[index].id.toString();
-
                         Provider.of<MoviesProvider>(context, listen: false)
-                            .watchedControl();
+                            .favoriteControlSimilar();
                       },
                     ),
                     title: Text(
