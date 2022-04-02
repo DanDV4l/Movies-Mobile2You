@@ -7,4 +7,5 @@ Vamos ao desafio.
 
 # Movies-Mobile2You
 O Movies foi inspirado na tela "detalhes" do aplicativo ToDo Movies para iOS.!
-![Screenshot_1648858221](https://user-images.githubusercontent.com/84111045/161356744-71ec4910-d9c4-4048-bc36-2cb02dee9684.png)
+
+![telas](https://user-images.githubusercontent.com/84111045/161388558-283e6bc2-deb9-4215-a0e8-18d8869ca54a.png)
