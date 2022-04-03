@@ -38,7 +38,7 @@ Um guia rápido sobre como as pastas estão organizadas no projeto.
  OBS: as requisições HTTP foram realizadas tanto com o pacote HTTP quanto com o DIO a fim de demonstrar minhas habilidades com ambos.
  
  ## Observações sobre o projeto
- - Para que a experiência e demonstração da construção da página ficasse mais completa, construí a tela inicial e suas funções;
+ - Para que a construção e demonstração da página ficasse mais completa, construí a tela inicial e suas funções;
  - A requisição da lista de gêneros é feita logo no início da execução e mantida em uma variável "final" para que a execução das outras requisições fossem executadas mais rapidamente. Levando em conta que estes valores são fixos ou algo bem próximo a isso, julguei ser uma estratégia mais interessante não fazer com que sejam requisitados mais de uma vez ao longo da execução do app;
  - Devido às limitações técnicas (não disponibilidade de um iPhone e de um Mac), os testes não foram realizados na plataforma da Apple (iOS).
 
