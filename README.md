@@ -42,7 +42,7 @@ Um guia rápido sobre como as pastas estão organizadas no projeto.
  - A requisição da lista de gêneros é feita logo no início da execução e mantida em uma variável "final" para que a execução das outras requisições fossem executadas mais rapidamente. Levando em conta que estes valores são fixos ou algo bem próximo a isso, julguei ser uma estratégia mais interessante não fazer com que sejam requisitados mais de uma vez ao longo da execução do app;
  - Devido às limitações técnicas (não disponibilidade de um iPhone e de um Mac), os testes não foram realizados na plataforma da Apple (iOS).
 
-## Há um problema
+## Há um problema (RESOLVIDO) 
  Não sei dizer se é por limitação da minha conexão ou do meu equipamento utilizado no desenvolvimento deste app, mas o único problema conhecido encontrado no app até o presente momento, é que rodando em modo depuração (debug) as imagens utilizadas nas miniaturas da lista de sugestão (utilizando Image.network) apresentam erro de carregamento pelo que parece ser o tempo de carregamento/download das imagens. Problema que não ocorre com o app rodando em release mode.
  ### ATUALIZAÇÃO SOBRE O PROBLEMA
  O problema é causado por um dos filmes na lista de filmes sugeridos relacionados ao filme "A HORA DO PESADELO". O filme é chamado bodybag e não está retornando corretamente sua imagem de capa.
