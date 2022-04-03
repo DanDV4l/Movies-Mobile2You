@@ -35,11 +35,12 @@ Um guia rápido sobre como as pastas estão organizadas no projeto.
   - Google Fonts;
   - Dio;
  
- OBS: as requisições HTTP foram realizadas tanto com o pacote HTTP quanto com o DIO afim de demonstrar minhas habilidades com ambos.
+ OBS: as requisições HTTP foram realizadas tanto com o pacote HTTP quanto com o DIO a fim de demonstrar minhas habilidades com ambos.
  
  ## Observações sobre o projeto
  - Para que a experiência e demonstração da construção da página ficasse mais completa, construí a tela inicial e suas funções;
- - A requisição da lista de gêneros é feita logo no início da execução e mantida em uma variável "final" para que a execução das outras requisições fossem executadas mais rapidamente. Levando em conta que estes valores são fixos ou algo bem próximo a isso, julguei ser uma estratégia mais interessante não fazer com que fossem requisitados mais de uma vez ao longo da execução do app;
+ - A requisição da lista de gêneros é feita logo no início da execução e mantida em uma variável "final" para que a execução das outras requisições fossem executadas mais rapidamente. Levando em conta que estes valores são fixos ou algo bem próximo a isso, julguei ser uma estratégia mais interessante não fazer com que sejam requisitados mais de uma vez ao longo da execução do app;
+ - Devido às limitações técnicas (não disponibilidade de um iPhone e de um Mac), os testes não foram realizados na plataforma da Apple (iOS).
 
 ## Há um problema
  Não sei dizer se é por limitação da minha conexão ou do meu equipamento utilizado no desenvolvimento deste app, mas o único problema conhecido encontrado no app até o presente momento, é que rodando em modo depuração (debug) as imagens utilizadas nas miniaturas da lista de sugestão (utilizando Image.network) apresentam erro de carregamento pelo que parece ser o tempo de carregamento/download das imagens. Problema que não ocorre com o app rodando em release mode.
