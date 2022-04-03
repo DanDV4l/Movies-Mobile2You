@@ -115,9 +115,8 @@ class HomePage extends StatelessWidget {
                                   movieProvider.id = 372058;
                                   Navigator.pushNamed(context, '/load');
                                 }),
-                                homeThumbnailMovie(context, id: 2675,
-                                    setID: () {
-                                  movieProvider.id = 2675;
+                                homeThumbnailMovie(context, id: 11, setID: () {
+                                  movieProvider.id = 11;
                                   Navigator.pushNamed(context, '/load');
                                 }),
                                 homeThumbnailMovie(context, id: 496243,
