@@ -8,7 +8,7 @@ class Styles {
   static final listTitle = GoogleFonts.oxygen(
     color: AppColors.textTitle,
     fontWeight: FontWeight.bold,
-    fontSize: 18,
+    fontSize: 17,
   );
   static final subtitle = GoogleFonts.oxygen(
     color: AppColors.textSubtitle,

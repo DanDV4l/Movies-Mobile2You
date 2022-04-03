@@ -48,18 +48,20 @@ class HomePage extends StatelessWidget {
                     centerTitle: true,
                     actions: [
                       TextButton(
-                          onPressed: () async {
-                            movieProvider.id = int.parse(cMovieID.text);
-                            try {
-                              movieProvider.movie = await getMovieData(
-                                  id: int.parse(cMovieID.text));
-                              Navigator.pushNamed(context, "/details");
-                            } catch (err) {
-                              Navigator.pushNamed(context, "/error");
-                            }
+                          onPressed: cMovieID.text.isNotEmpty
+                              ? () async {
+                                  movieProvider.id = int.parse(cMovieID.text);
+                                  try {
+                                    movieProvider.movie = await getMovieData(
+                                        id: int.parse(cMovieID.text));
+                                    Navigator.pushNamed(context, "/details");
+                                  } catch (err) {
+                                    Navigator.pushNamed(context, "/error");
+                                  }
 
-                            cMovieID.clear();
-                          },
+                                  cMovieID.clear();
+                                }
+                              : null,
                           child: const Text(
                             "OK",
                             style: Styles.buttons,

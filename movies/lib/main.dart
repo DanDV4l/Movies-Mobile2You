@@ -3,11 +3,17 @@ import 'package:movies/modules/detailspage/detailspage.dart';
 import 'package:movies/modules/homepage/homepage.dart';
 import 'package:movies/modules/loadingpage/loadingpage.dart';
 import 'package:movies/providers/movieprovider.dart';
+import 'package:movies/providers/similarprovider.dart';
 import 'package:movies/shared/elements/errorpage.dart';
 import 'package:provider/provider.dart';
 
 void main() => runApp(MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => MovieProvider())],
+      providers: [
+        ChangeNotifierProvider(create: (_) => MovieProvider()),
+        ChangeNotifierProvider(
+          create: (_) => SimilarMovieProvider(),
+        )
+      ],
       child: MaterialApp(
         title: 'MOVIES - Mobile2You',
         routes: {

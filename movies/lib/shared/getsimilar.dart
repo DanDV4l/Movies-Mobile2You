@@ -16,7 +16,7 @@ Future<List<Movie>> getSimilarMovie(context, {required id}) async {
     Movie similar = Movie(
         listItem['id'],
         listItem['title'],
-        'https://image.tmdb.org/t/p/w500${listItem['poster_path']}',
+        'https://image.tmdb.org/t/p/h50${listItem['poster_path']}',
         listItem['vote_count'],
         listItem['popularity'],
         listItem['release_date'],
