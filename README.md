@@ -44,6 +44,8 @@ Um guia rápido sobre como as pastas estão organizadas no projeto.
 
 ## Há um problema
  Não sei dizer se é por limitação da minha conexão ou do meu equipamento utilizado no desenvolvimento deste app, mas o único problema conhecido encontrado no app até o presente momento, é que rodando em modo depuração (debug) as imagens utilizadas nas miniaturas da lista de sugestão (utilizando Image.network) apresentam erro de carregamento pelo que parece ser o tempo de carregamento/download das imagens. Problema que não ocorre com o app rodando em release mode.
+ ### ATUALIZAÇÃO SOBRE O PROBLEMA
+ O problema é causado por um dos filmes na lista de filmes sugeridos relacionados ao filme "A HORA DO PESADELO". O filme é chamado bodybag e não está retornando corretamente sua imagem de capa.
  
  
 ![telas](https://user-images.githubusercontent.com/84111045/161388558-283e6bc2-deb9-4215-a0e8-18d8869ca54a.png)
