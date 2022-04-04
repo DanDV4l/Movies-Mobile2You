@@ -10,7 +10,7 @@ O app Movies foi criado para demonstrar minha capacidade em cumprir o desafio t�
 
 ## O que foi feito?
 
-- ✅ A tela proposta foi criada (inclusive com o efeito de sombreamento na imagem);
+- ✅ A tela proposta foi criada (inclusive o efeito de sombreamento na imagem);
 - ✅ As informações que preenchem essa tela vem das APIs do site The Movie Database;
 - ✅ O gerenciamento de estado foi feito através do Provider;
 - ✅ O ícone de coração muda quando é clicado; 
