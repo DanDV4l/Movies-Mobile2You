@@ -25,7 +25,7 @@ Widget buildFavorite(context, {getScreenSize, itemProvider}) {
               ),
             ),
             Container(
-              margin: const EdgeInsets.fromLTRB(20, 10, 20, 0),
+              margin: const EdgeInsets.fromLTRB(4, 10, 4, 0),
               width: getScreenSize.width,
               height: getScreenSize.height * 0.35,
               child: GridView.builder(
