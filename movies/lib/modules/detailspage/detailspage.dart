@@ -1,11 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movies/modules/detailspage/elements/imagebox.dart';
 import 'package:movies/modules/detailspage/elements/similarlist.dart';
 import 'package:movies/providers/movieprovider.dart';
 import 'package:movies/providers/similarprovider.dart';
 import 'package:movies/shared/themes/appcolors.dart';
-import 'package:movies/shared/themes/textstyles.dart';
 import 'package:provider/provider.dart';
 
 class DetailsPage extends StatelessWidget {

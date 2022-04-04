@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:movies/models/movie.dart';
 import 'package:movies/providers/movieprovider.dart';
-import 'package:movies/shared/getsimilar.dart';
 import 'package:movies/shared/themes/textstyles.dart';
 import 'package:provider/provider.dart';
 
