@@ -33,9 +33,7 @@ Um guia rápido sobre como as pastas estão organizadas no projeto.
   - Http;
   - Provider;
   - Google Fonts;
-  - Dio;
  
- OBS: as requisições HTTP foram realizadas tanto com o pacote HTTP quanto com o DIO a fim de demonstrar minhas habilidades com ambos.
  
  ## Observações sobre o projeto
  - Para que a construção e demonstração da página ficassem mais completas, construí a tela inicial e suas funcionalidades;
