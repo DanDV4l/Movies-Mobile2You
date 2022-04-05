@@ -1,3 +1,6 @@
+# Versão experimental
+Essa versão é ainda mais completa. Ela possui a função de armazenar os favoritos no Firebase e o login utilizando seu GMail. Em breve virão mais novidades!
+
 
 # Bem vindos e bem vindas!
 E aí, pessoal da Dimensa/Mobile2You! Sejam muito bem vindos ao meu perfil do GitHub!
