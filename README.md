@@ -23,6 +23,8 @@ O app Movies foi criado para demonstrar minha capacidade em cumprir o desafio t�
 - ✅ Na lista de sugestão de filmes, se algum filme estiver marcado como favorito, ele terá um símbolo de "check" à sua direita;
 - ✅ Foi criada uma tela inicial, que exibe filmes fixados por mim, os filmes que foram marcados como favoritos e uma barra de busca para buscar
     filmes através de seu ID;
+- ✅ Integração com o Firebase para armazenar a lista de favoritos;
+- ✅ Atenticação com Google Account.
 
 ## Como os códigos estão organizados?
 Um guia rápido sobre como as pastas estão organizadas no projeto.
@@ -42,11 +44,6 @@ Um guia rápido sobre como as pastas estão organizadas no projeto.
  - Para que a construção e demonstração da página ficassem mais completas, construí a tela inicial e suas funcionalidades;
  - A requisição da lista de gêneros é feita logo no início da execução e mantida em uma variável "final" para que a execução das outras requisições fossem executadas mais rapidamente. Levando em conta que estes valores são fixos ou algo bem próximo a isso, julguei ser uma estratégia mais interessante não fazer com que sejam requisitados mais de uma vez ao longo da execução do app;
  - Devido às limitações técnicas (não disponibilidade de um iPhone e de um Mac), os testes não foram realizados na plataforma da Apple (iOS).
-
-## Há um problema (RESOLVIDO) 
- Não sei dizer se é por limitação da minha conexão ou do meu equipamento utilizado no desenvolvimento deste app, mas o único problema conhecido encontrado no app até o presente momento, é que rodando em modo depuração (debug) as imagens utilizadas nas miniaturas da lista de sugestão (utilizando Image.network) apresentam erro de carregamento pelo que parece ser o tempo de carregamento/download das imagens. Problema que não ocorre com o app rodando em release mode.
- ### ATUALIZAÇÃO SOBRE O PROBLEMA
- O problema é causado por um dos filmes na lista de filmes sugeridos relacionados ao filme "A HORA DO PESADELO". O filme é chamado bodybag e não está retornando corretamente sua imagem de capa.
  
  ![screens](https://user-images.githubusercontent.com/84111045/161465312-547c7ce6-1db2-48bd-892c-a9ea197ae06a.png)
 
