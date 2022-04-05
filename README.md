@@ -1,4 +1,8 @@
 
+# Conheça a nova e aprimorada versão do app!
+Disponível no link: https://github.com/DanDV4l/Movies-Mobile2You/tree/DanDV4l-Movies-New_resources
+
+
 # Bem vindos e bem vindas!
 E aí, pessoal da Dimensa/Mobile2You! Sejam muito bem vindos ao meu perfil do GitHub!
 Aqui vocês podem encontrar os principais trabalhos que já realizei ao longo da minha trajetória como desenvolvedor Flutter.
